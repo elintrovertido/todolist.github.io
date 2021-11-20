@@ -56,7 +56,8 @@ function deletelist(index){
     //let getLocalStorage = localStorage.getItem("new todo");
     //listarr = JSON.parse(getLocalStorage);
     listarr.splice(index, 1); // delete and add remaing list elements
-    
+    localStorage.setItem("new todo", JSON.stringify(listarr));
+    showlist();
 }
 
  //clearall function
